@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - CARRINHO DE COMPRAS</title>
+    
+    <!--Estilização da Page-->
+    <link rel="stylesheet" href="../styles/cesta_compras.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="menu">
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="../pages/balcao_planos.html">Planos</a></li>
+                <li><a href="../pages/balcao_produtos.html">Produtos</a></li>
+
+
+            </ul>
+            <div class="icons">
+                <a href="../pages/login.html" class="icon-user"><span class="name_user" value()></span><i class="large material-icons">account_box</i></a>
+                <a href="../pages/cesta_compras.html" class="icon-cart"><span class="cart_selecionados" value()></span><i class="large material-icons">add_shopping_cart</i></a>
+            </div>
+        </nav>
+        
+    </header>      
+    <main id="cart-container">       
+
+        <ul id="carrinho">
+            <li>
+              <img src="imagem_produto.jpg" alt="Foto do Produto">
+              <span class="nome-produto">'Nome do produto'</span>
+              <span class="valor-produto">R$ "#"</span>
+              <span class="quantidade-produto">1</span>
+              <button class="btn-diminuir">-</button>
+              <button class="btn-aumentar">+</button>
+              <button class="btn-remover">Remover</button>
+            </li>
+          </ul>
+          
+          <div id="total">
+            <span>Total: R$ 0,00</span>
+          </div>
+
+    </main>
+    <br>
+    <footer>
+        <div class="footer-column">
+            <h4>Redes Sociais</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Fale Conosco</h4>
+            <ul>
+                <li>Telefone: (11) 1234-5678</li>
+                <li>Email: contato@ecommerce.com</li>
+                <li>Endereço: Rua XXX, nº XXX, setor XXX,
+                    Município: XXX, UF: XXX.
+                </li>
+
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Dúvidas Frequentes</h4>
+            <ul>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Direitos do Consumidor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/cesta_compras.js" defer></script>
+
+    <!--Banco de Dados-->
+    <script src="../server/db_cliente.json"></script>
+    <script src="../server/db_serve.json"></script>
+    <script src="../server/db_usuario.json"></script>
+    <script src="../server/db-log_cliente.json"></script>
+    <script src="../server/db-log_serve.json"></script>
+    <script src="../server/db-log_usuario.json"></script>
+    <script src="../server/db-outd.json"></script>
+    <script src="../server/db-pl.json"></script>
+    <script src="../server/db-pr.json"></script>
+    <script src="../server/db-cesta_compras.json"></script>
+
+</body>
+</html>

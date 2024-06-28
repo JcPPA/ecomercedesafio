@@ -1,0 +1,238 @@
+/*ESTILIZAÇÃO GERAL DA PAGE <BODY> <HEADER> & <FOOTER>*/
+
+/*FONTES PRINCIPAIS*/
+@font-face {
+    font-family: 'NOME DA FONTE';
+    src: url('../ecomercedesafio/font/') format('woff2'),
+         url('../ecomercedesafio/font/') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'calibri', 'sans-serif';
+}
+
+/* Responsividade geral */
+@media (max-width: 1200px) {
+    /* Estilos para SmartTVs e Notebooks*/
+    body, header, main, nav, article, section, footer {
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Estilos para Tablets */
+    body, header, main, nav, article, section, footer {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para Smartphones */
+    body, header, main, nav, article, section, footer {
+        padding: 5px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(94, 94, 252);
+}
+
+a:hover {
+    color: rgb(0, 255, 251);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* Estilo para links ativos */
+a:active {
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo do menu sanduíche */
+nav {
+    margin-left: 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+header{
+    background-color: #000;
+    padding: 10px;
+    text-decoration: aliceblue;
+
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    padding-right: 25px;
+}
+
+.icon-user, .icon-cart {
+    margin-left: 10px;
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .menu-icon {
+        position: absolute;
+        left: 10px;
+        color: white
+    }
+
+    .icons {
+        position: absolute;
+        right: 5px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+/* Estilo do <footer> */
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-column h4 {
+    cursor: pointer;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+}
+
+.footer-column .separator {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-column ul {
+        display: none;
+    }
+
+    .footer-column h4.active + ul {
+        display: block;
+    }
+
+    .footer-column .separator {
+        display: block;
+        width: 100%;
+        height: 10px;
+    }
+}
+
+
+/*ESTILIZAÇÃO DA CESTA DE COMPRAS*/
+/* Estilização geral do carrinho */
+#carrinho {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#carrinho li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+#carrinho li img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+#carrinho li span {
+  margin-right: 15px;
+}
+
+#carrinho li button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+#carrinho li button:hover {
+  background-color: #ddd;
+}
+
+/* Estilização do total */
+#total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #carrinho li img {
+    margin-bottom: 10px; /* Adiciona margem inferior à imagem */
+  }
+
+  #carrinho li span,
+  #carrinho li button {
+    margin-bottom: 5px; /* Adiciona margem inferior aos spans e botões */
+  }
+}
+
+@media (max-width: 480px) {
+  #carrinho li img {
+    width: 60px; /* Reduz a largura da imagem */
+    height: 60px; /* Reduz a altura da imagem */
+  }
+}

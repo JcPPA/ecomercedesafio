@@ -1,0 +1,62 @@
+[
+  {
+      "id": "000000000000000001PR",
+      "produto__img": "../ecomercedesafio/img/Servidor Dell PowerEdge T40.png",
+      "produto__name": "Servidor Dell PowerEdge T40",
+      "valor": "1500,00",
+      "data_produto__status__indispo_dispo": "Disponível",
+      "descricao_text": "Servidor básico ideal para pequenas empresas.",
+      "preferencia": "Alta",
+      "star_value": "2.7"
+  },
+  {
+      "id": "000000000000000002PR",
+      "produto__img": "../ecomercedesafio/img/Servidor HPE ProLiant ML30 Gen10.png",
+      "produto__name": "Servidor HPE ProLiant ML30 Gen10",
+      "valor": "2500,00",
+      "data_produto__status__indispo_dispo": "Indisponível",
+      "descricao_text": "Servidor robusto para aplicações empresariais.",
+      "preferencia": "Média",
+      "star_value": "3.5"
+  },
+  {
+      "id": "000000000000000003PR",
+      "produto__img": "../ecomercedesafio/img/Teclado Gamer Mecânico RGB.png",
+      "produto__name": "Teclado Gamer Mecânico RGB",
+      "valor": "300,00",
+      "data_produto__status__indispo_dispo": "Disponível",
+      "descricao_text": "Teclado mecânico com iluminação RGB personalizável.",
+      "preferencia": "Alta",
+      "star_value": "4.0"
+  },
+  {
+      "id": "000000000000000004PR",
+      "produto__img": "../ecomercedesafio/img/Mouse Gamer Logitech G502.png",
+      "produto__name": "Mouse Gamer Logitech G502",
+      "valor": "250,00",
+      "data_produto__status__indispo_dispo": "Disponível",
+      "descricao_text": "Mouse gamer de alta precisão com sensor óptico.",
+      "preferencia": "Alta",
+      "star_value": "4.1"
+  },
+  {
+      "id": "000000000000000005PR",
+      "produto__img": "../ecomercedesafio/img/PC Gamer Alienware Aurora R12.png",
+      "produto__name": "PC Gamer Alienware Aurora R12",
+      "valor": "8000,00",
+      "data_produto__status__indispo_dispo": "Disponível",
+      "descricao_text": "PC gamer de alta performance com design futurista.",
+      "preferencia": "Alta",
+      "star_value": "4.9"
+  },
+  {
+      "id": "000000000000000006PR",
+      "produto__img": "../ecomercedesafio/img/PC Gamer ASUS ROG Strix.png",
+      "produto__name": "PC Gamer ASUS ROG Strix",
+      "valor": "7500,00",
+      "data_produto__status__indispo_dispo": "Indisponível",
+      "descricao_text": "PC gamer com componentes de última geração.",
+      "preferencia": "Média",
+      "star_value": "5.0"
+  }
+]

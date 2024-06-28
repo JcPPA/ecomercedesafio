@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - CADASTRO DE PRODUTOS & PLANOS</title>
+    
+    <!--Estilização da Page-->
+    <link rel="stylesheet" href="../styles/cadastro.pl-pr.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="menu">
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="../pages/balcao_plano.html">Planos</a></li>
+                <li><a href="../pages/balcao_produtos.html">Produtos</a></li>
+
+
+            </ul>
+            <div class="icons">
+                <a href="../pages/login.html" class="icon-user"><span class="name_user" value()></span><i class="large material-icons">account_box</i></a>
+                <a href="../pages/cesta_compras.html" class="icon-cart"><span class="cart_selecionados" value()></span><i class="large material-icons">add_shopping_cart</i></a>
+            </div>
+        </nav>
+        
+    </header>
+    <main>       
+        <!--CADASTRAR ELEMENTOS DESTA PAGINA-->
+
+        <div class="form-container">
+            <h1>Cadastro de Produtos</h1>
+            <form id="main-form">
+                <label>
+                    <input type="radio" name="type" value="produto"> Produto
+                </label>
+                <label>
+                    <input type="radio" name="type" value="plano"> Plano
+                </label>
+            </form>
+    
+            <div id="produto-panel" class="panel">
+                <div class="button-group">
+                    <button id="produto-novo">NOVO</button>
+                    <button id="produto-pesquisar">PESQUISAR</button>
+                    <button id="produto-editar">EDITAR</button>
+                    <button id="produto-salvar">SALVAR</button>
+                    <button id="produto-deletar">DELETAR</button>
+                </div>
+                <div id="produto-form" class="form-panel">
+                    <form id="produto-detalhes">
+                        <input type="text" id="produto-id" placeholder="ID (21 dígitos)">
+                        <div>
+                            <button id="carregar-imagem-produto">Carregar Imagem</button>
+                            <button id="enviar-imagem-produto">Enviar Imagem</button>
+                        </div>
+                        <input type="text" id="produto-nome" placeholder="Nome do produto">
+                        <input type="number" id="produto-valor" placeholder="Valor do produto (R$)">
+                        <input type="number" id="produto-desconto" placeholder="Desconto (R$)">
+                        <input type="number" id="produto-quantidade" placeholder="Quantidade">
+                        <select id="produto-disponibilidade">
+                            <option value="disponivel">Disponível</option>
+                            <option value="indisponivel">Indisponível</option>
+                        </select>
+                        <select id="produto-localidade">
+                            <option value="nacional">Nacional</option>
+                            <option value="internacional">Internacional</option>
+                        </select>
+                        <textarea id="produto-descricao" placeholder="Descrição do produto"></textarea>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="plano-panel" class="panel">
+                <div class="button-group">
+                    <button id="plano-novo">NOVO</button>
+                    <button id="plano-pesquisar">PESQUISAR</button>
+                    <button id="plano-editar">EDITAR</button>
+                    <button id="plano-salvar">SALVAR</button>
+                    <button id="plano-deletar">DELETAR</button>
+                </div>
+                <div id="plano-form" class="form-panel">
+                    <form id="plano-detalhes">
+                        <input type="text" id="plano-id" placeholder="ID (21 dígitos)">
+                        <div>
+                            <button id="carregar-imagem-plano">Carregar Imagem</button>
+                            <button id="enviar-imagem-plano">Enviar Imagem</button>
+                        </div>
+                        <input type="text" id="plano-nome" placeholder="Nome do plano">
+                        <input type="number" id="plano-valor" placeholder="Valor do plano (R$)">
+                        <input type="number" id="plano-desconto" placeholder="Desconto (R$)">
+                        <input type="text" id="plano-area-cobertura" placeholder="Área de Cobertura">
+                        <textarea id="plano-descricao-local" placeholder="Descrição e Referências do Local"></textarea>
+                        <select id="plano-disponibilidade">
+                            <option value="disponivel">Disponível</option>
+                            <option value="indisponivel">Indisponível</option>
+                        </select>
+                        <select id="plano-natureza">
+                            <option value="radio">Via rádio</option>
+                            <option value="fibra">Fibra óptica</option>
+                            <option value="satellite">Via satélite</option>
+                            <option value="other">Outra</option>
+                        </select>
+                        <textarea id="plano-descricao" placeholder="Descrição do plano"></textarea>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <br>
+    <footer>
+        <div class="footer-column">
+            <h4>Redes Sociais</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Fale Conosco</h4>
+            <ul>
+                <li>Telefone: (11) 1234-5678</li>
+                <li>Email: contato@ecommerce.com</li>
+                <li>Endereço: Rua XXX, nº XXX, setor XXX,
+                    Município: XXX, UF: XXX.
+                </li>
+
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Dúvidas Frequentes</h4>
+            <ul>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Direitos do Consumidor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/cadastro.pl-pr.js" defer></script>
+
+    <!--Banco de Dados-->
+    <script src="../server/db_cliente.json"></script>
+    <script src="../server/db_serve.json"></script>
+    <script src="../server/db_usuario.json"></script>
+    <script src="../server/db-log_cliente.json"></script>
+    <script src="../server/db-log_serve.json"></script>
+    <script src="../server/db-log_usuario.json"></script>
+    <script src="../server/db-outd.json"></script>
+    <script src="../server/db-pl.json"></script>
+    <script src="../server/db-pr.json"></script>
+
+</body>
+</html>

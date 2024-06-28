@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - HOME >> MINHA PROVEDORA</title>
+    
+    <!--Estilização da Page-->
+    <link rel="stylesheet" href="../styles/login.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="menu">
+                <li><a href="../main.html">Home</a></li>
+                <li><a href="../pages/balcao_planos.html">Planos</a></li>
+                <li><a href="../pages/balcao_produtos.html">Produtos</a></li>
+
+
+            </ul>
+            <div class="icons">
+                <a href="../pages/login.html" class="icon-user"><span class="name_user" value()></span><i class="large material-icons">account_box</i></a>
+                <a href="../pages/cesta_compras.html" class="icon-cart"><span class="cart_selecionados" value()></span><i class="large material-icons">add_shopping_cart</i></a>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+
+        <div class="container">
+            <div class="buttonsForm">
+              <div class="btnColor"></div>
+              <button id="btnSignin">Login</button>
+              <button id="btnSignup">Cadastro</button>
+            </div>
+        
+            <form id="signin">
+              <input type="text" placeholder="Email" required />
+              <i id="icon_config" class="fas fa-envelope iEmail"></i>
+              <input type="password" placeholder="Password" required />
+              <i id="icon_config" class="fas fa-lock iPassword"></i>
+              <div class="divCheck">
+                <input type="checkbox" />
+                <span>Confirme senha</span>
+              </div>
+              <button type="submit">Fazer login</button>
+            </form>
+        
+            <form id="signup">
+              <input type="text" placeholder="Email" required />
+              <i id="icon_config" class="fas fa-envelope iEmail"></i>
+              <input type="password" placeholder="Password" required />
+              <i id="icon_config" class="fas fa-lock iPassword"></i>
+              <input type="password" placeholder="Password" required />
+              <i id="icon_config" class="fas fa-lock iPassword2"></i>
+              <div class="divCheck">
+                <input type="checkbox" required />
+                <span>Li e Aceito todos os termos e condições do <a href=”#”> CONTRATO </a> de prestação de serviços!</label> </span>
+              </div>
+              <button type="submit">Continue</button>
+            </form>
+          </div>
+          <article id="formulário de cadastro do cliente">
+            
+            <!-- Form 1: Cadastro Pessoal -->
+                <div class="form-container" id="form1">
+                    <form id="personalForm">
+                        <h2>Cadastro Pessoal</h2>
+                        <div class="img-circle" id="img_circle">
+                            <i id="img_placeholder">Imagem do Usuário</i>
+                        </div>
+                        <div>
+                            <input type="file" id="upload_image" accept="image/jpeg" style="display: none;">
+                            <button type="button" onclick="document.getElementById('upload_image').click()">Enviar a foto</button>
+                            <button type="button" onclick="savePhoto()">Salvar foto</button>
+                        </div>
+                        <div>
+                            <label for="documentType">Tipo de Documento:</label>
+                            <select id="documentType" name="documentType" onchange="toggleDocumentFields()">
+                                <option value="cpf">CPF</option>
+                                <option value="cnpj">CNPJ</option>
+                            </select>
+                        </div>
+                        <section id="cpf_section">
+                            <label for="cpf">Nº de CPF:</label>
+                            <input type="text" id="cpf" name="cpf" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                            <span class="error-message" id="cpf_error">Erro de preenchimento ou CPF Inválido!</span>
+
+                            <label for="fullName">Nome Completo:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="name_error">Erro de digitação, caracteres não reconhecidos!</span>
+
+                            <label for="motherName">Nome da Mãe:</label>
+                            <input type="text" id="motherName" name="motherName" required>
+                            <span class="error-message" id="mother_error">Erro de digitação, caracteres não reconhecidos!</span>
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email_error">Erro de preenchimento ou E-mail Inválido!</span>
+
+                            <label for="altEmail">E-mail Alternativo:</label>
+                            <input type="email" id="altEmail" name="altEmail">
+                            <span class="error-message" id="altEmail_error">Erro de preenchimento ou E-mail Inválido!</span>
+
+                            <label for="whatsapp">Celular principal/Whatsapp:</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                            <span class="error-message" id="whatsapp_error">Erro de digitação, números não reconhecidos!</span>
+
+                            <label for="phone">Telefone alternativo:</label>
+                            <input type="tel" id="phone" name="phone" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                            <span class="error-message" id="phone_error">Erro de digitação, números não reconhecidos!</span>
+
+                            <label for="social">Rede Social:</label>
+                            <input type="text" id="social" name="social">
+
+                            <label for="password">Senha:</label>
+                            <input type="password" id="password" name="password" required>
+                            <span class="error-message" id="password_error">A senha deve ter ao menos 01 letra, 01 número e 01 símbolo</span>
+
+                            <label for="confirmPassword">Confirmar Senha:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="error-message" id="confirmPassword_error">Senha não confere! Por favor, corrija!</span>
+                        </section>
+                        <section id="cnpj_section" style="display: none;">
+                            <label for="cnpj">Nº de CNPJ:</label>
+                            <input type="text" id="cnpj" name="cnpj" maxlength="18" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" required>
+                            <span class="error-message" id="cnpj_error">Erro de preenchimento ou CNPJ Inválido!</span>
+
+                            <label for="corporateName">Razão Social:</label>
+                            <input type="text" id="corporateName" name="corporateName" required>
+                            <span class="error-message" id="corporateName_error">Erro! É obrigatório o preenchimento da Razão Social!</span>
+
+                            <label for="tradeName">Nome Fantasia:</label>
+                            <input type="text" id="tradeName" name="tradeName" required>
+
+                            <label for="email_cnpj">E-mail:</label>
+                            <input type="email" id="email_cnpj" name="email_cnpj" required>
+                            <span class="error-message" id="email_cnpj_error">Erro de preenchimento ou E-mail Inválido!</span>
+
+                            <label for="altEmail_cnpj">E-mail Alternativo:</label>
+                            <input type="email" id="altEmail_cnpj" name="altEmail_cnpj">
+                            <span class="error-message" id="altEmail_cnpj_error">Erro de preenchimento ou E-mail Inválido!</span>
+
+                            <label for="whatsapp_cnpj">Celular Comercial/Whatsapp:</label>
+                            <input type="tel" id="whatsapp_cnpj" name="whatsapp_cnpj" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                            <span class="error-message" id="whatsapp_cnpj_error">Erro de digitação, números não reconhecidos!</span>
+
+                            <label for="phone_cnpj">Telefone alternativo:</label>
+                            <input type="tel" id="phone_cnpj" name="phone_cnpj" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                            <span class="error-message" id="phone_cnpj_error">Erro de digitação, números não reconhecidos!</span>
+
+                            <label for="social_cnpj">Rede Social:</label>
+                            <input type="text" id="social_cnpj" name="social_cnpj">
+
+                            <label for="password_cnpj">Senha:</label>
+                            <input type="password" id="password_cnpj" name="password_cnpj" required>
+                            <span class="error-message" id="password_cnpj_error">A senha deve ter ao menos 01 letra, 01 número e 01 símbolo</span>
+
+                            <label for="confirmPassword_cnpj">Confirmar Senha:</label>
+                            <input type="password" id="confirmPassword_cnpj" name="confirmPassword_cnpj" required>
+                            <span class="error-message" id="confirmPassword_cnpj_error">Senha não confere! Por favor, corrija!</span>
+                        </section>
+                        <button type="button" onclick="previousForm()">Cancelar</button>
+                        <button type="button" onclick="nextForm()">Avançar</button>
+                    </form>
+                </div>
+
+                <!-- Form 2: Endereço Residencial -->
+                <div class="form-container" id="form2">
+                    <form id="addressForm">
+                        <h2>Endereço Residencial</h2>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" maxlength="9" pattern="\d{5}-\d{3}" onblur="pesquisacep(this.value);" required>
+                        <span class="error-message" id="cep_error">Erro de digitação ou CEP Desconhecido!</span>
+
+                        <label for="address">Endereço:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="quadraLote">Quadra e Lote:</label>
+                        <input type="text" id="quadraLote" name="quadraLote">
+
+                        <label for="number">Nº:</label>
+                        <input type="text" id="number" name="number">
+
+                        <label for="sector">Setor:</label>
+                        <input type="text" id="sector" name="sector" required>
+
+                        <label for="city">Cidade:</label>
+                        <input type="text" id="city" name="city" required>
+
+                        <label for="state">Estado:</label>
+                        <input type="text" id="state" name="state" required>
+
+                        <label for="complement">Complemento:</label>
+                        <input type="text" id="complement" name="complement">
+
+                        <label for="residentialProof">Comprovante de Endereço:</label>
+                        <input type="file" id="residentialProof" accept="application/pdf, image/jpeg" required>
+                        <span class="error-message" id="residentialProof_error">Favor anexar o Comprovante de Endereço!</span>
+
+                        <button type="button" onclick="previousForm()">Voltar</button>
+                        <button type="button" onclick="nextForm()">Avançar</button>
+                    </form>
+                </div>
+
+                <!-- Form 3: Veículo -->
+                <div class="form-container" id="form3">
+                    <form id="vehicleForm">
+                        <h2>Dados do Veículo</h2>
+                        <label for="licensePlate">Nº de Placa:</label>
+                        <input type="text" id="licensePlate" name="licensePlate" required>
+                        <span class="error-message" id="licensePlate_error">Favor preencher o campo</span>
+
+                        <label for="vehicle">Marca e Modelo:</label>
+                        <input type="text" id="vehicle" name="vehicle" required>
+                        <span class="error-message" id="vehicle_error">Favor preencher o campo</span>
+
+                        <label for="vehicleYear">Ano do Veículo:</label>
+                        <input type="text" id="vehicleYear" name="vehicleYear" required>
+                        <span class="error-message" id="vehicleYear_error">Favor preencher o campo</span>
+
+                        <label for="renavam">Renavam:</label>
+                        <input type="text" id="renavam" name="renavam" required>
+                        <span class="error-message" id="renavam_error">Favor preencher o campo</span>
+
+                        <label for="vehicleColor">Cor do Veículo:</label>
+                        <input type="text" id="vehicleColor" name="vehicleColor" required>
+                        <span class="error-message" id="vehicleColor_error">Favor preencher o campo</span>
+
+                        <label for="vehiclePhoto">Enviar foto do veículo:</label>
+                        <input type="file" id="vehiclePhoto" accept="image/jpeg" required>
+                        <span class="error-message" id="vehiclePhoto_error">Favor anexar a Foto do Veículo!</span>
+
+                        <label for="vehicleChecklist">Check-list do Veículo:</label>
+                        <div class="checkbox">
+                            <input type="checkbox" id="docsCheck" name="vehicleChecklist" required>
+                            <label for="docsCheck">Documentos de porte obrigatório</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="tireCheck" name="vehicleChecklist" required>
+                            <label for="tireCheck">Estado dos pneus e sobressalente</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="lightsCheck" name="vehicleChecklist" required>
+                            <label for="lightsCheck">Faróis, lanternas, indicadores luminosos e luzes de emergência</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="fluidCheck" name="vehicleChecklist" required>
+                            <label for="fluidCheck">Fluidos do veículo (óleo, freio, etc.)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="hornCheck" name="vehicleChecklist" required>
+                            <label for="hornCheck">Buzina</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="cleaningCheck" name="vehicleChecklist" required>
+                            <label for="cleaningCheck">Condições de limpeza</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="mirrorsCheck" name="vehicleChecklist" required>
+                            <label for="mirrorsCheck">Espelhos retrovisores</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="brakeCheck" name="vehicleChecklist" required>
+                            <label for="brakeCheck">Freios</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="beltCheck" name="vehicleChecklist" required>
+                            <label for="beltCheck">Cintos de segurança</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="windshieldCheck" name="vehicleChecklist" required>
+                            <label for="windshieldCheck">Para-brisa e limpadores</label>
+                        </div>
+
+                        <button type="button" onclick="previousForm()">Voltar</button>
+                        <button type="submit">Finalizar</button>
+                    </form>
+                </div>
+
+          </article>
+
+    </main>
+    <br>
+    <footer>
+        <div class="footer-column">
+            <h4>Redes Sociais</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Tiktok</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Fale Conosco</h4>
+            <ul>
+                <li>Telefone: (11) 1234-5678</li>
+                <li>Email: contato@ecommerce.com</li>
+                <li>Endereço: Rua XXX, nº XXX, setor XXX,
+                    Município: XXX, UF: XXX.
+                </li>
+
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="footer-column">
+            <h4>Dúvidas Frequentes</h4>
+            <ul>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Direitos do Consumidor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../scripts/login.js" defer></script>
+
+    <!--Banco de Dados-->
+    <script src="../server/db_cliente.json" defer></script>
+    <script src="../server/db_serve.json" defer></script>
+    <script src="../server/db_usuario.json" defer></script>
+    <script src="../server/db-log_cliente.json" defer></script>
+    <script src="../server/db-log_serve.json" defer></script>
+    <script src="../server/db-log_usuario.json" defer></script>
+    <script src="../server/db-outd.json" defer></script>
+    <script src="../server/db-pl.json" defer></script>
+    <script src="../server/db-pr.json" defer></script>
+    <script src="../server/db-cesta_compras.json" defer></script>
+    <script src="../API/swagger.json" defer></script>
+
+</body>
+</html>
